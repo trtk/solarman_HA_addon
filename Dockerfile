@@ -16,3 +16,7 @@ WORKDIR /
 COPY solarman.py .
 COPY mqtt.py .
 CMD ["python", "-u", "/solarman.py", "--repeat"]
+COPY run.sh /run.sh
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]
