@@ -210,6 +210,7 @@ def run(config):
         mqtt.message(config["mqtt"], topic + "/inverter/deviceState", inverter_data["deviceState"], config["debug"])
         mqtt.message(config["mqtt"], topic + "/logger/deviceState", logger_data["deviceState"], config["debug"])
         print(f"{time.strftime('%Y-%m-%d %H:%M:%S')}: ⚡ Inverter DeviceState: {inverter_device_state} -> Only Status MQTT publish")
+        print(inverter_data)
 
 
 if __name__ == "__main__":
